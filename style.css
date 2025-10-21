@@ -1,0 +1,177 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to right, #162738, #3f6993);
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Container for logo and nav (header) */
+.container {
+  text-align: center;
+  padding: 20px 0; /* smaller height */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #162738, #3f6993); /* keep original gradient */
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* slight shadow for separation */
+}
+
+/* Logo styling */
+.logo {
+  width: 180px; /* slightly smaller for tighter header */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto; /* less margin for smaller header */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* slightly reduced spacing */
+}
+
+nav a {
+  text-decoration: none;
+  color: #B6DBFF;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: white;
+}
+
+/* ======== SECTION STYLING ======== */
+
+
+.section {
+  min-height: 100vh;
+  padding: 160px 20px 100px; /* adjusted top padding for smaller header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section h1,
+.section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 700px;
+  line-height: 1.7;
+  color: #e2ecf5;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100px; /* ensures it fills viewport but leaves space for header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px; /* push image below header */
+  background-color: #ffffff; /* optional: base color before image loads */
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 1200px; /* optional: limits size on very large screens */
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+/* Distinct section backgrounds for contrast */
+
+#home {
+  background: linear-gradient(to bottom, #B6DBFF, #FFFFFF);
+}
+
+#about {
+  background: linear-gradient(to bottom, #FFFFFF, #B6DBFF);
+}
+
+#recipe {
+  background: linear-gradient(to bottom, #B6DBFF, #FFFFFF);
+}
+
+#contact {
+  background: linear-gradient(to bottom, #FFFFFF, #B6DBFF);
+}
+
+/* ======== CONTACT FORM ======== */
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+
+form textarea {
+  height: 100px;
+  resize: none;
+}
+
+button {
+  padding: 10px 25px;
+  background-color: #B6DBFF;
+  color: #162738;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: white;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background: #0e1a27;
+  color: #B6DBFF;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.9rem;
+}
