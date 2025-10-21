@@ -89,23 +89,27 @@ nav a.active {
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 100px; /* ensures it fills viewport but leaves space for header */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 120px; /* push image below header */
-  background-color: #ffffff; /* optional: base color before image loads */
+  justify-content: center; /* centers the image horizontally */
+  align-items: center;     /* vertically aligns if there’s text later */
+  margin-top: 163px;       /* offset for fixed header */
+  background-color: #ffffff;
   overflow: hidden;
+  text-align: center;
+  padding: 0;              /* remove extra space */
+  height: auto;            /* let it follow the image height */
 }
 
 .hero-img {
-  width: 100%;
-  max-width: 1200px; /* optional: limits size on very large screens */
-  height: auto;
-  object-fit: contain;
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;        /* image responsive but not too large */
+  height: auto;            /* maintain aspect ratio */
+  margin: 0 auto;          /* centers inside section */
+  object-fit: contain;     /* ensures full image is visible */
 }
+
+
 
 
 
