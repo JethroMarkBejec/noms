@@ -13,28 +13,64 @@
     <img src="img/NAME.png" alt="Noms Logo" class="logo" />
     <nav>
       <ul class="nav-links">
-        <li><a href="#hero" class="active">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#recipe">RECIPE</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#recipe">Recipes</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- HERO SECTION -->
   <section id="hero" class="hero-section">
     <img src="img/HERO.png" alt="Hero Banner" class="hero-img">
   </section>
 
   <!-- HOME SECTION -->
   <section id="home" class="section home-section">
-    <h2>Home</h2>
-    <p>Your go-to place for mouthwatering recipes and food inspiration.</p>
+    <div class="home-container">
+      <img src="img/CH.png" alt="Recipe cards" class="home-image">
+
+      <a href="#recipe" class="home-btn">GO TO RECIPE</a>
+
+      <p class="home-subtext">
+        Ready to try something new?<br>
+        Browse our full collection.
+      </p>
+    </div>
   </section>
 
   <!-- ABOUT SECTION -->
-  <section id="about" class="section about-section">
-    <h2>About Us</h2>
-    <p>At Noms, we believe food brings people together. We share delicious, easy-to-make recipes that anyone can enjoy!</p>
+  <section id="about" class="about-section">
+    <!-- Top Row: Header Image + Why Card -->
+    <div class="about-top-row">
+      <div class="about-header">
+        <img src="img/about.png" alt="About Noms" class="about-header-img" />
+      </div>
+
+      <div class="about-card why-card">
+        <h3>Why Noms Exists?</h3>
+        <p>Noms is a little space for sharing pastries I love and bake myself. It’s all about keeping things simple, approachable, and sweet.</p>
+      </div>
+    </div>
+
+    <!-- Grid for Remaining Cards -->
+    <div class="about-grid">
+      <div class="about-card mission-card">
+        <h3>Mission</h3>
+        <p>To make baking feel joyful and accessible. Whether you're new or experienced, Noms invites you to explore and share with warmth.</p>
+      </div>
+
+      <div class="about-card design-card">
+        <h3>Design Concept</h3>
+        <p>Soft edges, floating cards, and tactile reveals — every detail is crafted to feel inviting and playful, like unwrapping a treat.</p>
+      </div>
+
+      <div class="about-card personal-card">
+        <h3>Personal Touch</h3>
+        <p>Every recipe is tested, loved, and shared from the heart. Noms reflects cozy weekends, handwritten notes, and homemade magic.</p>
+      </div>
+    </div>
   </section>
 
   <!-- RECIPE SECTION -->

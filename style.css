@@ -13,60 +13,45 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Container for logo and nav (header) */
+/* HEADER */
 .container {
   text-align: center;
-  padding: 20px 0; /* smaller height */
+  padding: 20px 0;
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(to right, #162738, #3f6993); /* keep original gradient */
+  background: linear-gradient(to right, #162738, #3f6993);
   z-index: 100;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* slight shadow for separation */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Logo styling */
 .logo {
-  width: 180px; /* slightly smaller for tighter header */
-  height: auto;
-  display: block;
-  margin: 0 auto 10px auto; /* less margin for smaller header */
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-  transition: transform 0.3s ease;
+  width: 180px;
+  margin-bottom: 10px;
 }
 
-.logo:hover {
-  transform: scale(1.05);
-}
-
-/* Navigation bar */
-nav ul {
+.nav-links {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 50px; /* slightly reduced spacing */
+  gap: 50px;
 }
 
-nav a {
+.nav-links a {
   text-decoration: none;
   color: #B6DBFF;
-  font-size: 1.05rem;
   font-weight: 500;
-  letter-spacing: 1px;
   transition: color 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
+.nav-links a:hover {
   color: white;
 }
 
-/* ======== SECTION STYLING ======== */
-
-
+/* Section Styling */
 .section {
   min-height: 100vh;
-  padding: 160px 20px 100px; /* adjusted top padding for smaller header */
+  padding: 160px 20px 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,31 +75,26 @@ nav a.active {
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: center; /* centers the image horizontally */
-  align-items: center;     /* vertically aligns if there’s text later */
-  margin-top: 163px;       /* offset for fixed header */
-  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  margin-top: 163px;
+  background: linear-gradient(to bottom, #FFFFFF, #B6DBFF);
   overflow: hidden;
   text-align: center;
-  padding: 0;              /* remove extra space */
-  height: auto;            /* let it follow the image height */
 }
 
 .hero-img {
   display: block;
   width: 100%;
-  max-width: 900px;        /* image responsive but not too large */
-  height: auto;            /* maintain aspect ratio */
-  margin: 0 auto;          /* centers inside section */
-  object-fit: contain;     /* ensures full image is visible */
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
 
-
-
-
-/* Distinct section backgrounds for contrast */
-
+/* Section Backgrounds */
 #home {
   background: linear-gradient(to bottom, #B6DBFF, #FFFFFF);
 }
@@ -131,7 +111,224 @@ nav a.active {
   background: linear-gradient(to bottom, #FFFFFF, #B6DBFF);
 }
 
-/* ======== CONTACT FORM ======== */
+/* HOME SECTION */
+.home-section {
+  padding-top: 0;
+  margin-top: 0;
+  background: linear-gradient(to bottom, #B6DBFF 81%, #FFFFFF 100%);
+}
+
+/* Container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 24px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+@keyframes glide {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.home-image {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  animation: glide 4s ease-in-out infinite;
+}
+
+/* Button */
+.home-btn {
+  background-color: #162738;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  padding: 18px 70px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  margin-top: -100px;
+}
+
+/* Button Hover */
+.home-btn:hover {
+  background-color: #3f6993;
+  transform: scale(1.05);
+}
+
+/* Subtext */
+.home-subtext {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000 !important;
+  line-height: 1.5;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-container {
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .home-btn {
+    padding: 14px 40px;
+    font-size: 1rem;
+  }
+
+  .home-subtext {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .home-image {
+    max-width: 100%;
+  }
+}
+
+/* ABOUT SECTION */
+.about-section {
+  background-color: #dbeeff;
+  padding: 60px 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Top Row: Header + Why Card */
+.about-top-row {
+  display: flex;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  align-items: center;
+}
+
+.about-header {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-header-img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border: none;
+}
+
+.why-card {
+  flex: 1;
+}
+
+/* Grid Layout for Remaining Cards */
+.about-grid {
+  display: grid;
+  grid-template-areas:
+    "mission design"
+    "personal personal";
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Base Card Styling */
+.about-card {
+  border-radius: 16px;
+  padding: 24px;
+  color: #ffffff;
+  background-color: #162738;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Grid Areas */
+.mission-card {
+  grid-area: mission;
+}
+
+.design-card {
+  grid-area: design;
+}
+
+.personal-card {
+  grid-area: personal;
+}
+
+/* Headings */
+.about-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Text */
+.about-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-top-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-header-img {
+    max-width: 180px;
+  }
+
+  .about-grid {
+    grid-template-areas:
+      "mission"
+      "design"
+      "personal";
+    grid-template-columns: 1fr;
+  }
+
+  .about-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Contact Form */
 form {
   margin-top: 30px;
   display: flex;
@@ -169,6 +366,17 @@ button {
 
 button:hover {
   background-color: white;
+}
+
+@media (min-width: 1200px) {
+  .home-left img {
+    max-width: 600px;
+  }
+}
+
+.hero-img {
+  width: 100%;
+  max-width: none;
 }
 
 /* ======== FOOTER ======== */
