@@ -74,22 +74,64 @@
   </section>
 
   <!-- RECIPE SECTION -->
-  <section id="recipe" class="section recipe-section">
-    <h2>Our Recipes</h2>
-    <p>Explore our collection of recipes—from simple snacks to full-course meals. Find your next favorite dish today!</p>
+  <section id="recipes" class="recipe-section">
+    <!-- Header Image -->
+    <div class="recipe-header">
+      <img src="img/recipes.png" alt="Recipes" class="recipe-header-img" />
+    </div>
+
+    <!-- Recipe Grid -->
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <img src="img/pol.png" alt="Polvoron" class="recipe-img" />
+      </div>
+
+      <div class="recipe-card">
+        <img src="img/ens.png" alt="Ensaymada" class="recipe-img" />
+      </div>
+
+      <div class="recipe-card">
+        <img src="img/brow.png" alt="Brownies" class="recipe-img" />
+      </div>
+
+      <div class="recipe-card">
+        <img src="img/coo.png" alt="Chocolate Chip Cookies" class="recipe-img" />
+      </div>
+
+      <div class="recipe-card">
+        <img src="img/cup.png" alt="Cupcakes" class="recipe-img" />
+      </div>
+
+      <div class="recipe-card">
+        <img src="img/chee.png" alt="Cheesecake" class="recipe-img" />
+      </div>
+    </div>
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="section contact-section">
-    <h2>Contact Us</h2>
-    <p>Have feedback or recipe suggestions? We’d love to hear from you!</p>
-    <form action="#">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+<section id="survey" class="survey-section">
+  <div class="survey-header">
+    <h3>We’d also love to hear your feedback!</h3>
+  </div>
+
+  <form class="survey-form">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="First, Middle, and Last Name" />
+
+    <label for="age">Age</label>
+    <input type="number" id="age" />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" />
+
+    <label for="source">How did you find us?</label>
+    <input type="text" id="source" />
+
+    <label for="feedback">Feedback</label>
+    <textarea id="feedback" rows="5" placeholder="Share your thoughts..."></textarea>
+
+    <button type="submit">SUBMIT</button>
+  </form>
+</section>
 
   <!-- FOOTER -->
   <footer>

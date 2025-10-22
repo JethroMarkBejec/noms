@@ -131,18 +131,6 @@ body {
   margin-top: 0;
 }
 
-@keyframes glide {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .home-image {
   width: 100%;
   max-width: 1000px;
@@ -223,7 +211,8 @@ body {
   display: flex;
   gap: 24px;
   max-width: 1000px;
-  margin: 0 auto 40px;
+  margin: 0 auto; /* Removed bottom margin */
+  padding: 0;      /* Removed any padding */
   align-items: center;
 }
 
@@ -232,11 +221,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;      /* Removed padding */
+  margin: 0;       /* Removed margin */
 }
 
 .about-header-img {
   width: 100%;
-  max-width: 280px;
+  max-width: 400px;
   height: auto;
   display: block;
   object-fit: contain;
@@ -263,6 +254,7 @@ body {
 .about-card {
   border-radius: 16px;
   padding: 24px;
+  margin: 0;
   color: #ffffff;
   background-color: #162738;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -289,8 +281,9 @@ body {
 /* Headings */
 .about-card h3 {
   margin: 0 0 12px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
+  color: #a8dfff; /* Light blue text */
 }
 
 /* Text */
@@ -328,55 +321,114 @@ body {
   }
 }
 
-/* Contact Form */
-form {
-  margin-top: 30px;
+/* Header Image */
+.recipe-header {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
-form input,
-form textarea {
-  width: 80%;
-  max-width: 400px;
-  padding: 12px;
+.recipe-header-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  object-fit: contain;
   border: none;
-  border-radius: 8px;
-  outline: none;
-  font-size: 1rem;
 }
 
-form textarea {
-  height: 100px;
-  resize: none;
+/* Grid Layout */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0;
 }
 
-button {
-  padding: 10px 25px;
-  background-color: #B6DBFF;
-  color: #162738;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
+/* Recipe Cards */
+.recipe-card {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
 }
 
-button:hover {
-  background-color: white;
+.recipe-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
-@media (min-width: 1200px) {
-  .home-left img {
-    max-width: 600px;
+/* Responsive */
+@media (max-width: 768px) {
+  .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.hero-img {
-  width: 100%;
-  max-width: none;
+@media (max-width: 480px) {
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-header-img {
+    max-width: 300px;
+  }
+}
+
+
+.survey-section {
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.survey-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.survey-header h3 {
+  font-size: 1.6rem;
+  color: #a8dfff;
+  margin: 0;
+}
+
+.survey-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.survey-form label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.survey-form input,
+.survey-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #162738;
+  font-size: 1rem;
+}
+
+.survey-form button {
+  padding: 12px;
+  background-color: #162738;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 /* ======== FOOTER ======== */
