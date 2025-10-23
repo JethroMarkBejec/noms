@@ -8,135 +8,240 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <!-- HEADER -->
-  <header class="container">
-    <img src="img/NAME.png" alt="Noms Logo" class="logo" />
+  <header class="sticky-header">
+    <a href="#hero">
+      <img src="img/NAME.png" alt="Noms Logo" class="logo" />
+    </a>
     <nav>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
       <ul class="nav-links">
         <li><a href="#hero" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#recipe">Recipes</a></li>
+        <li><a href="#recipes">Recipes</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- HERO SECTION -->
-  <section id="hero" class="hero-section">
-    <img src="img/HERO.png" alt="Hero Banner" class="hero-img">
+  <section id="hero" class="section hero-section">
+    <div class="hero-content centered">
+      <div class="hero-text">
+        <h1 class="hero-title">CARD UP. BAKE UP.</h1>
+        <p class="hero-subtitle">Stack your cards. Bake your best.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- HOME SECTION -->
-  <section id="home" class="section home-section">
-    <div class="home-container">
-      <img src="img/CH.png" alt="Recipe cards" class="home-image">
 
-      <a href="#recipe" class="home-btn">GO TO RECIPE</a>
+<!-- HOME SECTION -->
+<section id="home" class="section home-section">
+  <div class="home-content">
+    <img src="img/DECK.png" alt="Welcome to Noms" class="home-image" />
+    <p>Welcome to Noms — a cozy space where recipes come alive and baking brings people together.</p>
+    <a href="#recipes" class="cta-button">Explore Recipes</a>
+  </div>
+</section>
 
-      <p class="home-subtext">
-        Ready to try something new?<br>
-        Browse our full collection.
+<!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+  <div class="about-top-row">
+    <div class="about-header">
+      <img src="img/about.png" alt="About Noms" class="about-header-img" />
+    </div>
+    <div class="about-card why-card">
+      <h3>Why Noms Exists</h3>
+      <p>
+        Noms is a cozy space where I share pastries I love and bake myself.
+        It’s built for anyone who enjoys simple, honest baking stories.
+        Every post is a little reminder that baking can be sweet and stress-free.
       </p>
     </div>
-  </section>
+  </div>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about-section">
-    <!-- Top Row: Header Image + Why Card -->
-    <div class="about-top-row">
-      <div class="about-header">
-        <img src="img/about.png" alt="About Noms" class="about-header-img" />
-      </div>
-
-      <div class="about-card why-card">
-        <h3>Why Noms Exists?</h3>
-        <p>Noms is a little space for sharing pastries I love and bake myself. It’s all about keeping things simple, approachable, and sweet.</p>
-      </div>
+  <div class="about-grid">
+    <div class="about-card mission-card">
+      <h3>Mission</h3>
+      <p>
+        Noms aims to make baking joyful, creative, and easy to approach.
+        Whether you’re new or experienced, there’s always something warm to discover.
+        It’s about celebrating the process, not just the final treat.
+      </p>
     </div>
 
-    <!-- Grid for Remaining Cards -->
-    <div class="about-grid">
-      <div class="about-card mission-card">
-        <h3>Mission</h3>
-        <p>To make baking feel joyful and accessible. Whether you're new or experienced, Noms invites you to explore and share with warmth.</p>
-      </div>
-
-      <div class="about-card design-card">
-        <h3>Design Concept</h3>
-        <p>Soft edges, floating cards, and tactile reveals — every detail is crafted to feel inviting and playful, like unwrapping a treat.</p>
-      </div>
-
-      <div class="about-card personal-card">
-        <h3>Personal Touch</h3>
-        <p>Every recipe is tested, loved, and shared from the heart. Noms reflects cozy weekends, handwritten notes, and homemade magic.</p>
-      </div>
+    <div class="about-card design-card">
+      <h3>Design Concept</h3>
+      <p>
+        The design uses soft edges, floating cards, and playful reveals.
+        Every detail is meant to feel light and welcoming, like opening a pastry box.
+        It turns browsing into a cozy, sensory experience.
+      </p>
     </div>
-  </section>
+
+    <div class="about-card personal-card">
+      <h3>Personal Journey</h3>
+      <p>
+        Noms began as my personal baking journal and creative outlet.
+        It’s where I document recipes, lessons, and happy baking moments.
+        Each entry grows with feedback, experiments, and a sprinkle of imagination.
+      </p>
+    </div>
+  </div>
+</section>
 
   <!-- RECIPE SECTION -->
   <section id="recipes" class="recipe-section">
-    <!-- Header Image -->
     <div class="recipe-header">
       <img src="img/recipes.png" alt="Recipes" class="recipe-header-img" />
     </div>
-
-    <!-- Recipe Grid -->
     <div class="recipe-grid">
-      <div class="recipe-card">
-        <img src="img/pol.png" alt="Polvoron" class="recipe-img" />
-      </div>
-
-      <div class="recipe-card">
-        <img src="img/ens.png" alt="Ensaymada" class="recipe-img" />
-      </div>
-
-      <div class="recipe-card">
-        <img src="img/brow.png" alt="Brownies" class="recipe-img" />
-      </div>
-
-      <div class="recipe-card">
-        <img src="img/coo.png" alt="Chocolate Chip Cookies" class="recipe-img" />
-      </div>
-
-      <div class="recipe-card">
-        <img src="img/cup.png" alt="Cupcakes" class="recipe-img" />
-      </div>
-
-      <div class="recipe-card">
-        <img src="img/chee.png" alt="Cheesecake" class="recipe-img" />
-      </div>
+      <div class="recipe-card"><img src="img/pol.png" alt="Polvoron" class="recipe-img" /></div>
+      <div class="recipe-card"><img src="img/ens.png" alt="Ensaymada" class="recipe-img" /></div>
+      <div class="recipe-card"><img src="img/brow.png" alt="Brownies" class="recipe-img" /></div>
+      <div class="recipe-card"><img src="img/coo.png" alt="Cookies" class="recipe-img" /></div>
+      <div class="recipe-card"><img src="img/cup.png" alt="Cupcakes" class="recipe-img" /></div>
+      <div class="recipe-card"><img src="img/chee.png" alt="Cheesecake" class="recipe-img" /></div>
     </div>
-  </section>
 
-<section id="survey" class="survey-section">
+    <div class="weekly-overview">
+        <h3>Weekly Bakes & Vibes</h3>
+        <p>(overview of the week)</p>
+        <div class="weekly-table-wrapper">
+          <table class="weekly-table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Pastry</th>
+                <th>Mood</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Monday</td><td>Brownies</td><td>Happy</td><td>Too salty</td></tr>
+              <tr><td>Tuesday</td><td>Cupcake</td><td>Happy</td><td>Perfect</td></tr>
+              <tr><td>Wednesday</td><td>None</td><td>Calm</td><td>Rest</td></tr>
+              <tr><td>Thursday</td><td>None</td><td>Calm</td><td>Rest</td></tr>
+              <tr><td>Friday</td><td>Cookies</td><td>Stress</td><td>Crazy</td></tr>
+              <tr><td>Saturday</td><td>None</td><td>Calm</td><td>Rest</td></tr>
+              <tr><td>Sunday</td><td>None</td><td>Calm</td><td>Rest</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section contact-section">
+  <h2 class="contact-heading">
+    <img src="img/contact.png" alt="Contact" class="contact-heading-img" />
+  </h2>
+  <p>Email us at noms@gmail.com or use the form below to share your thoughts.</p>
+
   <div class="survey-header">
     <h3>We’d also love to hear your feedback!</h3>
   </div>
 
-  <form class="survey-form">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" placeholder="First, Middle, and Last Name" />
+  <div class="form-wrapper">
+    <form class="survey-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="First, Middle, and Last Name" required />
 
-    <label for="age">Age</label>
-    <input type="number" id="age" />
+      <label for="age">Age</label>
+      <input type="number" id="age" required />
 
-    <label for="email">Email</label>
-    <input type="email" id="email" />
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
 
-    <label for="source">How did you find us?</label>
-    <input type="text" id="source" />
+      <label for="source">How did you find us?</label>
+      <input type="text" id="source" required />
 
-    <label for="feedback">Feedback</label>
-    <textarea id="feedback" rows="5" placeholder="Share your thoughts..."></textarea>
+      <label for="feedback">Feedback</label>
+      <textarea id="feedback" rows="5" placeholder="Share your thoughts..." required></textarea>
 
-    <button type="submit">SUBMIT</button>
-  </form>
+      <button type="submit">SUBMIT</button>
+    </form>
+  </div>
 </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Noms. All rights reserved.</p>
-  </footer>
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-left">
+      <div class="footer-left-columns">
+        <!-- Contacts Column -->
+        <div class="footer-contact-column">
+          <h4 class="footer-heading">Noms Contacts</h4>
+          <p class="footer-contact">gmail: <a href="mailto:noms@gmail.com">noms@gmail.com</a></p>
+          <p class="footer-contact">contact number: 0912 865 8164</p>
+        </div>
+
+        <!-- Social Media Column -->
+        <div class="footer-social-column">
+          <h4 class="footer-heading">Social Medias</h4>
+          <div class="footer-social">
+            <a href="#"><img src="img/fb.png" alt="Facebook" /></a>
+            <a href="#"><img src="img/ig.png" alt="Instagram" /></a>
+            <a href="#"><img src="img/x.png" alt="X" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <h2 class="footer-logo">noms!</h2>
+      <p class="footer-tagline">Card Up. Bake Up.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copyright">© 2025 Noms. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- BURGER MENU SCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const navContainer = document.querySelector(".nav-links");
+    const menuToggle = document.querySelector(".menu-toggle");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navContainer.classList.remove("show");
+      });
+    });
+
+    menuToggle.addEventListener("click", () => {
+      navContainer.classList.toggle("show");
+    });
+  });
+</script>
 </body>
 </html>
 
+<script>
+  const section = document.querySelector('.recipe-section');
+  const cards = document.querySelectorAll('.recipe-card');
+
+  // Only enable interaction on desktop and tablet
+  if (window.innerWidth > 767) {
+    cards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        e.stopPropagation();
+        cards.forEach(c => c.classList.remove('focused'));
+        section.classList.add('blur');
+        card.classList.add('focused');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.recipe-card.focused')) {
+        cards.forEach(c => c.classList.remove('focused'));
+        section.classList.remove('blur');
+      }
+    });
+  }
+</script>
