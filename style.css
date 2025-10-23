@@ -31,7 +31,7 @@ body {
 }
 
 .logo {
-  width: 50px;
+  width: 70px;
   height: auto;
 }
 
@@ -61,7 +61,7 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: white;
+  color: rgb(207, 209, 236);
 }
 
 .nav-links a::after {
@@ -81,7 +81,7 @@ body {
 
 /* HERO SECTION */
 .hero-section {
-  padding: 212px 20px;
+  padding: 264px 20px;
   background: url('img/HB.png') center/cover no-repeat;
   color: #fff;
   position: relative;
@@ -112,20 +112,28 @@ body {
 
 .hero-title {
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #ffffff;
   margin-bottom: 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  text-shadow:
+    0 0 0px #ffffff,
+    0 0 10px #ff99cc,
+    0 0 20px #ff99cc,
+    2px 2px 3px rgba(225, 225, 225, 0.4); /* subtle depth */
 }
 
 .hero-subtitle {
   font-size: 0.8rem;
-  font-weight: 400;
-  color: #3f6993;
+  font-weight: 5000;
+  color: #a8dfff;
 }
 
 /* HOME SECTION */
 .home-section {
-  padding: 80px 20px;
+  padding: 84px 20px;
   background: linear-gradient(to bottom right, #B6DBFF, #3f6993);
   color: #162738;
   text-align: center;
@@ -178,8 +186,8 @@ body {
 
 /* ABOUT SECTION */
 .about-section {
-  background: #FFFFFF;
-  padding: 60px 20px;
+  background: #162738;
+  padding: 130px 20px;
 }
 
 .about-top-row {
@@ -226,8 +234,8 @@ body {
 .recipe-section {
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 100px;
   background: linear-gradient(to bottom right, #B6DBFF, #3f6993);
   color: #162738;
   text-align: center;
@@ -351,7 +359,7 @@ body {
 
 /* CONTACT SECTION */
 .contact-section {
-  padding: 80px 20px;
+  padding: 100px 20px;
   background: #fff;
   color: #000;
   text-align: center;
@@ -439,11 +447,11 @@ body {
 .site-footer {
   background-color: #162738;
   color: #a8dfff;
-  padding: 60px 20px;
+  padding: 30px 30px 20px;
   font-family: 'Quicksand', sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
 .footer-top {
@@ -551,10 +559,10 @@ body {
 /* Bottom Section */
 .footer-bottom {
   text-align: center;
-  border-top: 2px solid #3a4f63;
-  padding-top: 50px;
-  margin-top: 0;
-  margin-bottom: -10px;
+  padding-top: 30px;
+  padding-left: 0px;
+  padding-bottom: -30px;
+  background-color: #ccc;
 }
 
 .footer-description {
